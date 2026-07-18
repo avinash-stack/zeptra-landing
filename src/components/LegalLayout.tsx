@@ -29,10 +29,10 @@ export default function LegalLayout({ title, lastUpdated, children }: LegalLayou
 
           <div className="flex items-center gap-2 sm:gap-4">
             <Button variant="ghost" asChild className="px-2 text-foreground sm:px-4">
-              <a href={appUrl('/login')}>Login</a>
+              <a href={appUrl('/login')} target="_blank" rel="noopener noreferrer">Login</a>
             </Button>
             <Button asChild className="bg-primary px-3 text-white hover:bg-primary/90 sm:px-4">
-              <a href={appUrl('/create-organization')}>Get started free</a>
+              <a href={appUrl('/create-organization')} target="_blank" rel="noopener noreferrer">Get started free</a>
             </Button>
           </div>
         </div>

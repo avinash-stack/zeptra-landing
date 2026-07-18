@@ -93,7 +93,7 @@ export default function PrivacyPolicy() {
           Subject to applicable law, you may request access to, correction of, or deletion of your personal data. If the GDPR applies, you may also have rights to data portability, restriction or objection to certain processing, withdrawal of consent, and the right to lodge a complaint with a supervisory authority. Under the DPDP Act, you may seek a summary of your data and processing activities, correction, completion, updating, erasure, and grievance redressal.
         </p>
         <p className="mt-3">
-          Workspace data is often controlled by the organisation that invited or employs you. We may ask you to contact that organisation first, or we may forward your request to it, where it is the relevant data controller or Data Fiduciary. To exercise a right, contact us at <a className="font-medium text-primary hover:underline" href="mailto:privacy@getzeptra.com">privacy@getzeptra.com</a>.
+          Workspace data is often controlled by the organisation that invited or employs you. We may ask you to contact that organisation first, or we may forward your request to it, where it is the relevant data controller or Data Fiduciary. To exercise a right, contact us at <a className="font-medium text-primary hover:underline" href="mailto:legal@getzeptra.com">legal@getzeptra.com</a>.
         </p>
       </section>
 
@@ -114,14 +114,14 @@ export default function PrivacyPolicy() {
       <section>
         <h2 className="text-2xl font-bold text-foreground">12. Grievance Officer</h2>
         <p className="mt-3">
-          For matters under applicable Indian law, including the Information Technology Act and related rules, you may contact Zeptra’s Grievance Officer at <a className="font-medium text-primary hover:underline" href="mailto:grievance@getzeptra.com">grievance@getzeptra.com</a>. Please include enough detail for us to identify and address your concern.
+          For matters under applicable Indian law, including the Information Technology Act and related rules, you may contact Zeptra’s Grievance Officer at <a className="font-medium text-primary hover:underline" href="mailto:legal@getzeptra.com">legal@getzeptra.com</a>. Please include enough detail for us to identify and address your concern.
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold text-foreground">13. Contact and changes to this policy</h2>
         <p className="mt-3">
-          For general privacy questions, contact <a className="font-medium text-primary hover:underline" href="mailto:privacy@getzeptra.com">privacy@getzeptra.com</a>. We may update this policy when our practices or legal obligations change. We will post the revised policy here and update the “Last updated” date.
+          For general privacy questions, contact <a className="font-medium text-primary hover:underline" href="mailto:legal@getzeptra.com">legal@getzeptra.com</a>. We may update this policy when our practices or legal obligations change. We will post the revised policy here and update the “Last updated” date.
         </p>
       </section>
     </LegalLayout>

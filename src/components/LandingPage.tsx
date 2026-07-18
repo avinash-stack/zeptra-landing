@@ -10,7 +10,7 @@ import { appUrl } from '@/lib/domains';
 
 /** Always navigates to the app domain via full-page load */
 const AppLink = React.forwardRef<HTMLAnchorElement, { to: string, children?: React.ReactNode, className?: string, onClick?: () => void }>(({ to, children, ...props }, ref) => {
-  return <a href={appUrl(to)} ref={ref} {...props}>{children}</a>;
+  return <a href={appUrl(to)} ref={ref} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>;
 });
 AppLink.displayName = 'AppLink';
 
