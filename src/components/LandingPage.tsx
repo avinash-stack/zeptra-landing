@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { 
   Menu, X, CheckCircle, Receipt, ShieldCheck, GitBranch, 
@@ -15,6 +16,7 @@ AppLink.displayName = 'AppLink';
 
 const Landing: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currency, setCurrency] = useState<'INR' | 'USD'>('INR');
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
@@ -280,6 +282,23 @@ const Landing: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Simple pricing. No surprises.</h2>
               <p className="text-xl text-muted-foreground">Start free, upgrade when your team grows.</p>
+              <div className="mt-8 inline-flex rounded-lg border border-border bg-background p-1" role="group" aria-label="Select pricing currency">
+                {(['INR', 'USD'] as const).map((option) => (
+                  <button
+                    key={option}
+                    type="button"
+                    onClick={() => setCurrency(option)}
+                    aria-pressed={currency === option}
+                    className={`rounded-md px-4 py-2 text-sm font-semibold transition-colors ${
+                      currency === option
+                        ? 'bg-primary text-primary-foreground shadow-sm'
+                        : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                    }`}
+                  >
+                    {option}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -287,7 +306,7 @@ const Landing: React.FC = () => {
               <div className="bg-card border border-border rounded-2xl p-8 flex flex-col shadow-sm">
                 <h3 className="text-2xl font-bold text-foreground mb-2">Free forever</h3>
                 <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-4xl font-extrabold text-foreground">₹0</span>
+                  <span className="text-4xl font-extrabold text-foreground">{currency === 'INR' ? '₹0' : '$0'}</span>
                   <span className="text-muted-foreground font-medium">/ month</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-1">
@@ -309,11 +328,11 @@ const Landing: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-2">Pro</h3>
                 <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-4xl font-extrabold text-foreground">₹999</span>
-                  <span className="text-muted-foreground font-medium">/ month</span>
+                  <span className="text-4xl font-extrabold text-foreground">{currency === 'INR' ? '₹49' : '$1'}</span>
+                  <span className="text-muted-foreground font-medium">/ user / month</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-1">
-                  {['Everything in Free', 'Up to 50 users', 'Unlimited expenses', 'Analytics dashboard', 'Tally & CSV export', 'Priority support'].map((item, i) => (
+                  {['Everything in Free', 'Unlimited users', 'Unlimited expenses', 'Analytics dashboard', 'Tally & CSV export', 'Priority support'].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-foreground font-medium">
                       <CheckCircle className="w-5 h-5 text-primary shrink-0" /> {item}
                     </li>
@@ -331,7 +350,7 @@ const Landing: React.FC = () => {
                   <span className="text-4xl font-extrabold text-foreground">Custom</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-1">
-                  {['Everything in Pro', 'Unlimited users', 'API access', 'Dedicated account manager', 'Custom integrations', 'SLA'].map((item, i) => (
+                  {['Everything in Pro', 'API access', 'Dedicated account manager', 'Custom integrations', 'SLA'].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-foreground font-medium">
                       <CheckCircle className="w-5 h-5 text-primary shrink-0" /> {item}
                     </li>
@@ -382,8 +401,8 @@ const Landing: React.FC = () => {
           </div>
 
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <span className="cursor-default">Privacy</span>
-            <span className="cursor-default">Terms</span>
+            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-foreground transition-colors">Terms</Link>
           </div>
         </div>
       </footer>
