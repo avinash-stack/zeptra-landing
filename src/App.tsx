@@ -1,5 +1,7 @@
-import LandingPage from "@/components/LandingPage";
+import Landing from '@/components/Landing';
 
-const App = () => <LandingPage />;
+function App() {
+  return <Landing />;
+}
 
 export default App;
