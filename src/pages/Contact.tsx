@@ -120,7 +120,7 @@ export default function Contact() {
           <iframe
             data-tally-src="https://tally.so/r/KYN5Vk?transparentBackground=1"
             width="100%"
-            height="520"
+            height="620"
             frameBorder="0"
             marginHeight={0}
             marginWidth={0}

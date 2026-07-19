@@ -23,10 +23,10 @@ const Landing: React.FC = () => {
       {/* 1. STICKY HEADER / NAV */}
       <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center" aria-label="Zeptra home">
             <img src="/zeptra-logo.png" alt="Zeptra Logo" className="h-10 w-auto max-w-[140px] object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; (e.currentTarget.nextElementSibling as HTMLElement)?.classList.remove('hidden'); }} />
             <span className="hidden text-xl font-bold text-foreground">Zeptra</span>
-          </div>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             <a href="#features" className="hover:text-foreground transition-colors">Features</a>
