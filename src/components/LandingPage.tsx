@@ -32,6 +32,7 @@ const Landing: React.FC = () => {
             <a href="#features" className="hover:text-foreground transition-colors">Features</a>
             <a href="#how-it-works" className="hover:text-foreground transition-colors">How it works</a>
             <a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a>
+            <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
@@ -403,6 +404,7 @@ const Landing: React.FC = () => {
           <div className="flex gap-6 text-sm text-muted-foreground">
             <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
             <Link to="/terms" className="hover:text-foreground transition-colors">Terms</Link>
+            <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
           </div>
         </div>
       </footer>
