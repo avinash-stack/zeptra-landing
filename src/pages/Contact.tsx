@@ -43,7 +43,7 @@ export default function Contact() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-[700px] px-4 sm:px-6">
+      <main className="mx-auto max-w-[1080px] px-4 sm:px-6">
         {/* HEADLINE SECTION */}
         <section
           className="mt-10 rounded-2xl px-6 py-12 text-center sm:px-10 sm:py-16"
